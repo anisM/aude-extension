@@ -1,0 +1,22 @@
+{
+	"projectName": "audemars",
+	"licenseText": "proprietary",
+	"pkgs": [{
+		"name": "audemars CSS",
+		"file": "audemars.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.css",
+			"path": "themes/"
+		}]
+	}, {
+		"name": "audemars JS",
+		"file": "audemars.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.js",
+			"path": "themes/"
+		}]
+	}],
+	"resources" : []
+}
