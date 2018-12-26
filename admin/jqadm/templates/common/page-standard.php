@@ -228,7 +228,7 @@ switch( $this->param( 'act' ) )
 	<nav class="main-sidebar">
 		<div class="sidebar-wrapper">
 
-			<a class="logo" target="_blank" href="https://aimeos.org/update/?type=<?= $this->get( 'aimeosType' ) ?>&version=<?= $this->get( 'aimeosVersion' ) ?>">
+			<a class="logo" target="_blank" href="https://en.wikipedia.org/wiki/Back_office">
                 Backoffice
 			</a>
 
@@ -361,24 +361,7 @@ switch( $this->param( 'act' ) )
 					<?php endif; ?>
 				<?php endforeach; ?>
 
-				<?php if( $this->access( $this->config( 'admin/jqadm/resource/language/groups', [] ) ) ) : ?>
-					<li class="language treeview">
-						<span>
-							<i class="icon"></i>
-							<span class="title"><?= $enc->attr( $this->translate( 'language', $this->param( 'lang', $this->translate( 'admin', 'Language' ) ) ) ); ?></span>
-						</span>
-						<ul class="tree-menu">
-							<li class="menu-header"><strong><?= $enc->html( $this->translate( 'admin', 'Language' ) ); ?></strong></li>
-							<?php foreach( $this->get( 'pageI18nList', [] ) as $langid ) : ?>
-								<li class="lang-<?= $enc->attr( $langid ) ?>">
-									<a href="<?= $enc->attr( $this->url( $searchTarget, $cntl, $action, array( 'lang' => $langid ) + $params, [], $config ) ); ?>">
-										<span class="name"><?= $enc->html( $this->translate( 'language', $langid ) ); ?> (<?= $langid ?>)</span>
-									</a>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					</li>
-				<?php endif; ?>
+				
 			</ul>
 
 		</div>
@@ -393,9 +376,9 @@ switch( $this->param( 'act' ) )
 
 	</main>
 
-	<footer class="main-footer">
-		<a href="https://github.com/aimeos/ai-admin-jqadm/issues" target="_blank">
-			<?= $enc->html( $this->translate( 'admin', 'Bug or suggestion?' ) ); ?>
+	<footer class="main-footer text-center">
+		<a href="http://www.the-other-store.com/" target="_blank">
+			<?= $enc->html( $this->translate( 'admin', 'This Demo is a proof of concept please do not ask me more' ) ); ?>
 		</a>
 	</footer>
 
